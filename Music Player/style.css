@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(7, 5, 15);
+}
+
+.container{
+    width: 99vw;
+    height: 86vh;
+    margin: 8px;
+    background-color: rgb(70, 70, 70);
+    border-radius: 8px;
+    background-image: url("Images/bg5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.musiclist{
+    /* border: 2px solid red; */
+    width: 80vw;
+    height: 80%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.musiclist::-webkit-scrollbar {
+    width: 12px;  /* Width of the vertical scrollbar */
+    height: 12px; /* Height of the horizontal scrollbar */
+}
+
+.musiclist::-webkit-scrollbar-track {
+    background: #f1f1f177; /* Track background color */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+.musiclist::-webkit-scrollbar-thumb {
+    background: #888; /* Thumb color */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+.musiclist::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Thumb color on hover */
+}
+
+.musiclist::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* Custom scrollbar for Firefox */
+.musiclist {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #8888889a #f1f1f139; /* Thumb and track color */
+}
+
+.card{
+    border-top: 6px solid rgba(128, 0, 128, 0.59);
+    background-color: rgba(255, 255, 255, 0.777);
+    /* border: 2px solid green; */
+    width: 25vw;
+    height: 25%;
+    display: flex;
+    align-items: center;
+    gap:15px;
+    cursor: pointer;
+    transition: 0.1s ease-in-out;
+}
+
+.card:hover{
+    scale: 1.05;
+}
+
+.logo{
+    /* border: 2px solid black; */
+    height: 80%;
+    border-right: 2px solid rgba(149, 149, 149, 0.773);
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img{
+    width: 50px;
+}
+
+.info{
+    height: 80%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    font-family: "Jost", sans-serif;
+}
+
+.ruler{
+    width: 100%;
+    border: 1px solid rgba(149, 149, 149, 0.773);
+}
+
+.playbar{
+    width: 99%;
+    height: 10vh;
+    background-color: rgb(23, 22, 36);
+    margin: 8px;
+    border-radius: 8px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-around;
+    gap: 300px;
+}
+
+.bar-controller{
+    display: flex;
+    gap: 20px;
+}
+
+.bar-btn{
+    width: 20px;
+    filter: invert();
+    cursor: pointer;
+}
+
+.seek-container{
+    margin-right: 50px;
+    /* border: 2px solid red; */
+    width: 30%;
+    height: 90%;
+    display: flex;
+    gap:5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-family: "Jost", sans-serif;
+}
+
+.timings{
+    display: flex;
+    flex-direction: row;
+    gap: 170px;
+    align-items: center;
+}
+
+.seek-bar{
+    height: 0px;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.circle{
+    position: relative;
+    height: 1px;
+    width: 1px;
+    border: 6px solid white;
+    border-radius: 50%;
+    bottom: 6px;
+    left:0%;
+}
+
+.song-info{
+    width: 70%;
+    height: 90%;
+    /* border: 2px solid red; */
+    margin-left: 50px;
+    color: white;
+    font-family: "Jost", sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.bar-controller{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    margin-right: 30px;
+}
+
+.bar-buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.playbar-songinfo{
+    font-size: 30px;
+    font-family: "Jost", sans-serif;
+    width: 100%;
+    height: 60%;
+    /* border: 2px solid white; */
+}
+
+.playbar-artist{
+    font-size: 16px;
+    font-family: "Jost", sans-serif;
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid white; */
+}
+
+@media (max-width:500px){
+    .container{
+        margin: 0;
+        margin-top: 0;
+        width: 100%;
+        border-radius: 0;
+    }
+    .musiclist{
+        /* flex-direction: column; */
+    }
+    .card{
+        width: 80vw;
+        height: 12vh;
+        font-size: 12px;
+    }
+    .playbar{
+        width: 100vw;
+        height: 12vh;
+        margin: 0;
+        border-radius: 0;
+        margin-top: 5px;
+        /* justify-content: center; */
+        align-items: center;
+        flex-direction: column;
+        gap:10px;
+        padding: 0;
+    }
+    .song-info{
+        margin: 0;
+        margin-top: 10px;
+        width: 90vw;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .playbar-songinfo{
+        font-size: 16px;
+    }
+    .playbar-artist{
+        font-size: 12px;
+    }
+    .seek-container{
+        flex-direction: column;
+    }
+    .seek-bar{
+        margin-left: 15%;
+    }
+}

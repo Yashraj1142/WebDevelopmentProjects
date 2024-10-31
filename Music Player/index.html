@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="musiclist">
+            <!-- <div class="card">
+                <div class="logo">
+                    <img src="Images/play-circle.svg" alt="">
+                </div>
+                <div class="info">
+                    <h2>Song Name</h2>
+                    <h5>Artist Name</h5>
+                    <div class="ruler"></div>
+                    <p>Time</p>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="playbar">
+        <div class="song-info">
+            <div class="playbar-songinfo">
+                Song Name
+            </div>
+            <div class="playbar-artist">
+                Artist Name
+            </div>
+        </div>
+
+        <div class="bar-controller">
+            <div class="bar-buttons">
+                <img src="Images/prev_bar.svg" alt="" class="bar-btn bar-prev" id="prev">
+                <img src="Images/play_bar.svg" alt="" class="bar-btn bar-play" id="play">
+                <img src="Images/next_bar.svg" alt="" class="bar-btn bar-next">
+            </div>
+        </div>
+
+        <div class="seek-container">
+            <div class="seek-bar">
+                <div class="circle">
+
+                </div>
+            </div>
+            <div class="timings">
+                <div class="current-time">0:00</div>
+                <div class="full-time">0:00</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="musicPlayer.js"></script>
+</body>
+
+</html>
